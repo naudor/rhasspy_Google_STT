@@ -7,4 +7,6 @@ Make sure that you’re providing valid authentication credentials in order to u
 
 <b>After installation yous must update GCloudSpeech\google-stt.py with the path to your credentials.json.</b>
 
+Include lang_CA.py to have the possibility to speak in catalan correctly.
+
 I hope that help you ;-)
