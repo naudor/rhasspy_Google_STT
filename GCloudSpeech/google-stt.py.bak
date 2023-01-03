@@ -5,10 +5,12 @@ from sys import stdin
 
 from google.cloud import speech
 from google.cloud.speech import enums
+#from google.cloud import speech
 
 import requests
 import os
 import logging
+#logging.basicConfig(filename='execucio.log', encoding='utf-8', level=logging.DEBUG)
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="<path_to_credentials.json>"
 
 
