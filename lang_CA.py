@@ -22,7 +22,7 @@ import math
 from .lang_EU import Num2Word_EU
 
 
-class Num2Word_ES(Num2Word_EU):
+class Num2Word_CA(Num2Word_EU):
     CURRENCY_FORMS = {
         'EUR': (('euro', 'euros'), ('céntim', 'céntims')),
         'ESP': (('pesseta', 'pessetes'), ('céntim', 'céntims')),
