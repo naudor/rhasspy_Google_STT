@@ -8,7 +8,7 @@ Reviseu que li heu configurat un fitxer d'autentificació que permeti fer ús de
 
 Després de la instal·lació s'ha de modificar el fitxer GCloudSpeech\google-stt.py amb el camí al vostre fitxer de credencials (per exemple "credentials.json")
 
-Inclou el fitxer lang_CA que possibilita emprar nombres en català en Rhasspy.
+Inclou els fitxers necessaris per possibilitar emprar nombres en català en Rhasspy.
 
 Espero que us sigui d'utilitat ;-)
 <br><br>
@@ -21,6 +21,6 @@ Make sure that you’re providing valid authentication credentials in order to u
 
 <b>After installation yous must update GCloudSpeech\google-stt.py with the path to your credentials.json.</b>
 
-Include lang_CA.py to have the possibility to speak in catalan correctly.
+Include the necesary files to have the possibility to use numbers in catalan correctly.
 
 I hope that help you ;-)
