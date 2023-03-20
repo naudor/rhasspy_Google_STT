@@ -43,7 +43,7 @@ class Num2Word_CA(Num2Word_EU):
         self.errmsg_toobig = (
             "Nombre molt gran per ser convertit a paraules."
             )
-        self.gender_stem = "o"
+        self.gender_stem = ""
         self.exclude_title = ["i", "menys", "punt"]
         self.mid_numwords = [(1000, "mil"), (100, "cent"), (90, "noranta"),
                              (80, "vuitanta"), (70, "setenta"), (60, "seixanta"),
@@ -53,18 +53,18 @@ class Num2Word_CA(Num2Word_EU):
 				"vint-i-sis", "vint-i-cinc", "vint-i-quatre",
 				"vint-i-tres", "vint-i-dos", "vint-i-un",
 				"vint", "dinou", "divuit", "disset",
-				"dieciseis", "quinze", "catorze", "tretze", "dotze",
+				"setze", "quinze", "catorze", "tretze", "dotze",
 				"onze", "deu", "nou", "vuit", "set", "sis",
 				"cinc", "quatre", "tres", "dos", "un", "zero"]
         self.ords = {1: "primer",
-                     2: "segund",
+                     2: "segon",
                      3: "tercer",
                      4: "cuart",
-                     5: "quint",
-                     6: "sext",
-                     7: "séptim",
-                     8: "octav",
-                     9: "noven",
+                     5: "cinquè",
+                     6: "sisè",
+                     7: "setè",
+                     8: "vuitè",
+                     9: "novè",
                      10: "décim",
                      20: "vigésim",
                      30: "trigésim",
@@ -108,13 +108,13 @@ class Num2Word_CA(Num2Word_EU):
 
         if nnum == 100:
             if cnum == 5:
-                ctext = "quinien"
+                ctext = "cinc"
                 ntext = ""
             elif cnum == 7:
-                ctext = "sete"
+                ctext = "set"
             elif cnum == 9:
-                ctext = "nove"
-            ntext += "t" + self.gender_stem + "s"
+                ctext = "nou"
+            ntext += "-cent" + self.gender_stem + "s"
         else:
             ntext = " " + ntext
 
@@ -168,11 +168,11 @@ class Num2Word_CA(Num2Word_EU):
 
     def to_ordinal_num(self, value):
         self.verify_ordinal(value)
-        return "%s%s" % (value, "º" if self.gender_stem == 'o' else "ª")
+        return "%s%s" % (value, "º" if self.gender_stem == '' else "ª")
 
     def to_currency(self, val, currency='EUR', cents=True, separator=' amb',
                     adjective=False):
-        result = super(Num2Word_ES, self).to_currency(
+        result = super(Num2Word_CA, self).to_currency(
             val, currency=currency, cents=cents, separator=separator,
             adjective=adjective)
         # Handle exception, in spanish is "un euro" and not "uno euro"
