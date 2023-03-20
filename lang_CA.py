@@ -46,7 +46,7 @@ class Num2Word_CA(Num2Word_EU):
         self.gender_stem = ""
         self.exclude_title = ["i", "menys", "punt"]
         self.mid_numwords = [(1000, "mil"), (100, "cent"), (90, "noranta"),
-                             (80, "vuitanta"), (70, "setenta"), (60, "seixanta"),
+                             (80, "vuitanta"), (70, "setanta"), (60, "seixanta"),
                              (50, "cinquanta"), (40, "quaranta"),
                              (30, "trenta")]
         self.low_numwords = [	"vint-i-nou", "vint-i-vuit", "vint-i-set",
